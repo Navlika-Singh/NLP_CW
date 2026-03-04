@@ -1,4 +1,4 @@
-# PCL Detection — Don't Patronize Me!
+# PCL Detection - Don't Patronize Me!
 
 Code for binary PCL (Patronizing and Condescending Language) detection on the
 [Don't Patronize Me!](https://github.com/Perez-AlmendrosC/dontpatronizeme) dataset.
@@ -95,3 +95,5 @@ runs/               TensorBoard logs
 | 20% of train | `train_semeval_parids-labels.csv` | Internal validation / threshold tuning |
 | dev | `dev_semeval_parids-labels.csv` | Local test set (reported results) |
 | test | unlabelled | Marker submission |
+
+**Note:** As per the submission instructions, all files required for marking have been copied into the `BestModel/` directory. This includes the trained model checkpoint (`checkpoints/svm_mxbai_20260304_174317.joblib`), predictions (`predictions/dev.txt`, `predictions/test.txt`), training code (`train.py`, `train.sh`), and utility modules (`utils/helper.py`, `utils/load_data.py`). The checkpoint can be loaded directly using `joblib` to reproduce the reported results without retraining.
