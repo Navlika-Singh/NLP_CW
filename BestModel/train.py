@@ -45,10 +45,10 @@ import matplotlib.pyplot as plt
 from torch.utils.tensorboard import SummaryWriter
 
 EMBEDDING_MODELS = {
-    "mxbai":"mixedbread-ai/mxbai-embed-large-v1",      # dim=1024
-    "bge": "BAAI/bge-large-en-v1.5",                  # dim=1024
-    "e5": "intfloat/e5-large-v2",                    # dim=1024
-    "mpnet":"sentence-transformers/all-mpnet-base-v2", # dim=768
+    "mxbai":"mixedbread-ai/mxbai-embed-large-v1",      
+    "bge": "BAAI/bge-large-en-v1.5",                  
+    "e5": "intfloat/e5-large-v2",                    
+    "mpnet":"sentence-transformers/all-mpnet-base-v2",
 }
 
 EMBEDDING_DIMS = {
@@ -129,7 +129,7 @@ def apply_lora(sentence_transformer):
 
     hf_model = sentence_transformer._first_module().auto_model
 
-    # Auto-detect attention layer names since different models use different naming
+    #auto-detect attention layer names since different models use different naming
     all_module_names = [name for name, _ in hf_model.named_modules()]
 
     candidate_pairs = [
@@ -440,7 +440,7 @@ def main(args):
     y_local_test = local_test_df["label"].values
 
     class_weights = compute_class_weight(class_weight="balanced", classes=np.array([0, 1]), y=y_train)
-    print(f"\nClass weights → Non-PCL: {class_weights[0]:.3f}  "f"PCL: {class_weights[1]:.3f}")
+    print(f"\nClass weights Non-PCL: {class_weights[0]:.3f} "f"PCL: {class_weights[1]:.3f}")
 
     model_name = EMBEDDING_MODELS[args.embedding_model]
     print(f"\nLoading embedding model: {model_name}")
