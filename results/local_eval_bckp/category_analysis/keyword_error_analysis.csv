@@ -1,0 +1,11 @@
+keyword,total,pcl_count,fn,fp,errors,error_rate_%,miss_rate_%
+homeless,212,29,14,28,42,19.8,48.3
+poor-families,190,38,16,21,37,19.5,42.1
+hopeless,217,26,14,21,35,16.1,53.8
+refugee,188,13,7,9,16,8.5,53.8
+in-need,226,33,5,14,19,8.4,15.2
+vulnerable,209,20,6,11,17,8.1,30.0
+disabled,194,14,8,7,15,7.7,57.1
+women,233,14,3,8,11,4.7,21.4
+immigrant,218,7,5,1,6,2.8,71.4
+migrant,207,5,3,0,3,1.4,60.0
